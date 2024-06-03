@@ -45,7 +45,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v4
         with:
-          context: iperf
+          context: .
           platforms: linux/arm64
           push: true
           tags: ${{ steps.meta.outputs.tags }}
