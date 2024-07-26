@@ -1,5 +1,8 @@
 FROM alpine:3.14
-RUN apk add --no-cache iperf3
+RUN apk add --no-cache iperf3 bash
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+COPY . .
 EXPOSE 5201
-CMD ["/usr/bin/iperf3", "-s"]
+CMD "bash /usr/src/app/run_iperf.sh"
 
