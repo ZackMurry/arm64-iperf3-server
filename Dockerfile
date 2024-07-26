@@ -4,5 +4,5 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . .
 EXPOSE 5201
-CMD "bash /usr/src/app/run_iperf.sh"
+CMD /usr/src/app/run_iperf.sh
 
