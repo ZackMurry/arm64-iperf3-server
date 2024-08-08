@@ -1,5 +1,5 @@
 FROM alpine:3.14
-RUN apk add --no-cache iperf3 bash
+RUN apk add --no-cache iperf3 bash net-tools
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . .
